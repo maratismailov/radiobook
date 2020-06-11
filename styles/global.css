@@ -1,82 +1,15 @@
-@font-face {
-  font-weight: 400;
-  font-family: 'Roboto';
-  font-style: normal;
-  src: url('/fonts/Roboto-Regular.woff') format('woff');
-  font-display: swap;
-}
-
-@font-face {
-  font-weight: 400;
-  font-family: 'Roboto';
-  font-style: italic;
-  src: url('/fonts/Roboto-Italic.woff') format('woff');
-  font-display: swap;
-}
-
-@font-face {
-  font-weight: 700;
-  font-family: 'Roboto';
-  font-style: normal;
-  src: url('/fonts/Roboto-Bold.woff') format('woff');
-  font-display: swap;
-}
-
-@font-face {
-  font-weight: 700;
-  font-family: 'Roboto';
-  font-style: italic;
-  src: url('/fonts/Roboto-BoldItalic.woff') format('woff');
-  font-display: swap;
-}
-
-@font-face {
-  font-weight: 400;
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  src: url('/fonts/JetBrainsMono-Regular.woff') format('woff');
-  font-display: swap;
-}
-
-@font-face {
-  font-weight: 400;
-  font-family: 'JetBrains Mono';
-  font-style: italic;
-  src: url('/fonts/JetBrainsMono-Italic.woff') format('woff');
-  font-display: swap;
-}
-
-@font-face {
-  font-weight: 700;
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  src: url('/fonts/JetBrainsMono-Bold.woff') format('woff');
-  font-display: swap;
-}
-
-@font-face {
-  font-weight: 700;
-  font-family: 'JetBrains Mono';
-  font-style: italic;
-  src: url('/fonts/JetBrainsMono-Bold-Italic.woff') format('woff');
-  font-display: swap;
-}
-
-
-
 body {
-  font-family: 'Roboto';
   background-color: #121212;
   color: #ffffff
-}
+} 
 
 p {
   font-size: 16px;
 }
-
-a {
-  text-decoration: none;
-  color: green;
+.player {
+  width: 60%;
+  margin: auto;
+  margin-top: 35px;
 }
 
 img {
@@ -85,6 +18,39 @@ img {
     height: auto;
   }
 
-code {
-  font-family: 'JetBrains Mono' !important
+  .controls {
+    /* margin: auto; */
+    /* display: inline; */
+    padding: 5px;
+    /* min-width: 25%; */
+    max-width: inherit;
+    
+  }
+
+
+  .grid-container {
+    display: grid;
+    margin-top: 35px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 77px 46px;
+    grid-template-areas: "play pause" "vup vdown" "mute mute";
+  }
+  
+  .mute { grid-area: mute; 
+  margin-left: 35%; max-width: 45%;
 }
+  
+  .play { grid-area: play; margin: auto; margin-left: 69px; max-width: 69%;}
+  
+  .pause { grid-area: pause; margin: auto; margin-right: 69px;max-width: 69%;}
+  
+  .vup { grid-area: vup; margin: auto; margin-left: 69px;max-width: 69%;}
+  
+  .vdown { grid-area: vdown; margin: auto; margin-right: 69px;max-width: 69%;}
+
+
+
+  .source {
+    margin-top: 189px;
+  }

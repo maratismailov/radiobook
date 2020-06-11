@@ -3,21 +3,10 @@
     <meta 
      name='viewport' 
      content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'/>
-    <title>Eleventy Заглавное сообщение</title>
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <title>Радио книга</title>
     <link rel="manifest" href="/manifest.json" />
     <link rel="shortcut icon" href="/images/icons/favicon.ico" />
     <link rel="stylesheet" href="{{ '/styles/global.css' | url }}">
-    <link rel="stylesheet" href="{{ '/styles/prism.css' | url }}">
-        <!-- Preload font -->
-    <link rel="preload" href="/fonts/Roboto-Bold.woff" as="font" type="font/woff" crossorigin>
-    <link rel="preload" href="/fonts/Roboto-BoldItalic.woff" as="font" type="font/woff" crossorigin>
-    <link rel="preload" href="/fonts/Roboto-Italic.woff" as="font" type="font/woff" crossorigin>
-    <link rel="preload" href="/fonts/Roboto-Regular.woff" as="font" type="font/woff" crossorigin>
-    <link rel="preload" href="/fonts/JetBrainsMono-Regular.woff" as="font" type="font/woff" crossorigin>
-    <link rel="preload" href="/fonts/JetBrainsMono-Italic.woff" as="font" type="font/woff" crossorigin>
-    <link rel="preload" href="/fonts/JetBrainsMono-Bold.woff" as="font" type="font/woff" crossorigin>
-    <link rel="preload" href="/fonts/JetBrainsMono-Bold-Italic.woff" as="font" type="font/woff" crossorigin>
     <script>
       if ("serviceWorker" in navigator)
         navigator.serviceWorker.register("/service-worker.js");
@@ -25,20 +14,35 @@
   </head>
 
   <body>
-    {% include "../components/header.njk" %}
-    {{ content | safe }}
-    <script src="/styles/prism.js"></script>
-    <script>
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
-          });
-        }
-      });
-    }
-  </script>
+  <img src="/images/uploads/top-slogan.png" alt="radiobook">
+  <audio id="player" src="http://bookradio.hostingradio.ru:8069/fm" autoplay > </audio>
+
+
+  {# <div class='player'> 
+  <input class='controls' type='image' src = '/images/uploads/play.svg' onclick="document.getElementById('player').play()"/>
+  <input class='controls' type='image' src = '/images/uploads/stop.svg' onclick="document.getElementById('player').pause()"/>
+  </div>
+
+  <div class='player'> 
+  <input class='controls' type='image' src = '/images/uploads/vup.svg' onclick="document.getElementById('player').volume += 0.1"/>
+  <input class='controls' type='image' src = '/images/uploads/vdown.svg' onclick="document.getElementById('player').volume -= 0.1"/>
+  </div>
+  <div class='player'> 
+  <input class='controls' type='image' src = '/images/uploads/mute.svg' onclick="document.getElementById('player').volume = 0"/>
+  </div> #}
+
+<div class="grid-container">
+  <div class="mute"> <input class='controls' type='image' src = '/images/uploads/mute.svg' onclick="document.getElementById('player').volume = 0"/></div>
+  <div class="play"><input class='controls' type='image' src = '/images/uploads/play.svg' onclick="document.getElementById('player').play()"/></div>
+  <div class="pause"><input class='controls' type='image' src = '/images/uploads/stop.svg' onclick="document.getElementById('player').pause()"/></div>
+  <div class="vup"><input class='controls' type='image' src = '/images/uploads/vup.svg' onclick="document.getElementById('player').volume += 0.1"/></div>
+  <div class="vdown"><input class='controls' type='image' src = '/images/uploads/vdown.svg' onclick="document.getElementById('player').volume -= 0.1"/></div>
+</div>
+    {# {{ content | safe }} #}
+<div class='source'>
+Источник: <a href="https://radiokniga.com/">Радио Книга</a>
+
+</div>
   </body>
 
 </html>
