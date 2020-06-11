@@ -1,0 +1,15 @@
+---
+permalink: "feed.json"
+metadata:
+  title: "Eleventy blog template"
+  home_page_url: "https://heuristic-jepsen.netlify.app"
+  description: "Eleventy blog template"
+  feed_url: "https://heuristic-jepsen.netlify.app/feed.json"
+  icon: "https://heuristic-jepsen.netlify.app/images/icons/icon-96x96.png"
+  favicon: "https://heuristic-jepsen.netlify.app/images/icons/icon-96x96.png"
+  author:
+    name: "Марат Исмаилов"
+    url: "https://heuristic-jepsen.netlify.app"
+  expired: true
+---
+{% jsonFeed collections.posts, metadata, 100 %}

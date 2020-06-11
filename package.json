@@ -1,0 +1,31 @@
+{
+  "name": "eleventy_blog",
+  "version": "1.0.0",
+  "description": "eleventy_blog",
+  "main": ".eleventy.js",
+  "dependencies": {
+    "luxon": "^1.24.1"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy-navigation": "^0.1.5",
+    "@11ty/eleventy-plugin-rss": "^1.0.7",
+    "eleventy-plugin-json-feed": "0.0.7",
+    "eleventy-plugin-pwa": "^1.0.8",
+    "sharp": "^0.25.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/regfe89/eleventy_blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/regfe89/eleventy_blog/issues"
+  },
+  "homepage": "https://github.com/regfe89/eleventy_blog#readme"
+}

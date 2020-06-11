@@ -1,0 +1,8 @@
+---
+layout: layouts/base.njk
+permalink: /
+---
+Шаблон index.njk в корневой папке
+
+{% set postslist = collections.posts %}
+{% include "postslist.njk" %}
